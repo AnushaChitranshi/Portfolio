@@ -18,15 +18,15 @@ const ContactMe = (props: Props) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "portfolio",
-        "template_0xdiby9",
+        "service_ob6rhdh",
+        "template_8dlj8bp",
         form.current,
-        "LJ2tmRAE4H8BfsKr4",
+        "AHvG7_tMaROtT8RpT",
       )
       .then(
         (result) => {
           form.current
-          toast.success("Thank you for contacting me! I will get back to you soon 👋");
+          toast.success("Thank you for contacting me! I will get back to you soon!");
         },
         (error) => {
           toast.error("Something went wrong");
@@ -50,24 +50,24 @@ const ContactMe = (props: Props) => {
 
       <div className="flex flex-col space-y-10 mt-28 ">
         <h4 className="text-2xl md:text-4xl font-semibold text-center cursor-default">
-          I got just what you need.{" "}
-          <span className="text-[#F7AB0A] cursor-default">Lets Talk</span>
+          Got any questions?{" "}
+          <span className="text-[#F7AB0A] cursor-default">Let's Talk</span>
         </h4>
 
         <div className="space-y-3 ">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+918390685016</p>
+            <p className="text-2xl">+1 (513) 765-0436</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">Pune</p>
+            <p className="text-2xl">Cincinnati, OH</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">sunilbandwork@gmail.com</p>
+            <p className="text-2xl">anusha.chitranshi@gmail.com</p>
           </div>
         </div>
 

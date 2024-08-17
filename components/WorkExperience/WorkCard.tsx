@@ -13,7 +13,7 @@ type Props = {
   link?: string;
 };
 
-const CertCard = (props: Props) => {
+const WorkCard = (props: Props) => {
   const learnPoints = props.learnPoints;
 
   return (
@@ -107,4 +107,4 @@ const CertCard = (props: Props) => {
   );
 };
 
-export default CertCard;
+export default WorkCard;

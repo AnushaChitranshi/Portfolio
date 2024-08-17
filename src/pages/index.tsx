@@ -6,7 +6,7 @@ import About from "components/About/About";
 // import Skills from "components/OldSkills/Skills";
 import Projects from "components/Projects/Projects";
 import ContactMe from "components/Contact/ContactMe";
-import Certifications from "components/Certifications/Certifications";
+import WorkExperience from "components/WorkExperience/WorkExperience";
 import axios from "axios";
 import React from "react";
 import SkillsSection from "components/SkillsSection/SkillsSection";
@@ -42,11 +42,10 @@ export default function Home(props: Props) {
     
     text-white h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll z-0 sm:scrollbar-thin sm:scrollbar-thumb-[#F7AB0A]/80 sm:scrollbar-transparent sm:scrollbar-thumb-rounded-full sm:scrollbar-track-rounded-full">
       <Head>
-        <title>{`Sunil Band`}</title>
+        <title>{`Anusha Chitranshi`}</title>
       </Head>
       {/* Header */}
-      <Header data={props.data[5]} />
-
+      {/* <Header data={props.data[5]} /> */}
       {/* <section id="text">
   <Test/>
 </section> */}
@@ -54,6 +53,7 @@ export default function Home(props: Props) {
       {/* Hero */}
       <section id="hero" className="snap-start">
         <Hero data={props.data[1]} />
+        
       </section>
 
       {/* About */}
@@ -66,7 +66,7 @@ export default function Home(props: Props) {
         id="certifications"
         className="snap-start snap-mandatory snap-always"
       >
-        <Certifications data={props.data[2]} />
+        <WorkExperience data={props.data[2]} />
       </section>
 
       {/* Skills */}

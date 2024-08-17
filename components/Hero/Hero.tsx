@@ -4,7 +4,8 @@ import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import mugshot from "../../assets/mugshot.png";
+
+import HeroImage from "../../assets/heroImage.png";
 
 type Props = {
   data: any;
@@ -12,14 +13,13 @@ type Props = {
 
 const Hero = (props: Props) => {
   const [text] = useTypewriter({
-    // words: [
-    //   "Hey this is Sunil!",
-    //   "fullStackDeveloper.tsx",
-    //   "Hobbyist-Photographer.jpeg",
-    //   "<ChaiLover/> ",
-    // ],
-    words: props.data.typewriter,
-    // words: heroData.typewriter,
+    words: [
+      "Hey this is Anusha!",
+      "Cloud Engineer",
+      "Software Developer",
+      "Love books",
+      "Love meeting new people even more"
+    ],
     loop: true,
     delaySpeed: 2000,
     typeSpeed: 100,
@@ -46,15 +46,15 @@ const Hero = (props: Props) => {
         className="z-20 flex flex-col space-y-4"
       >
         <Image
-          src={props.data.heroImage}
-          width={400}
-          height={400}
+          src={HeroImage}
+          width={1500}
+          height={1500}
           priority={true}
-          alt="Sunil's Pic"
+          alt="Anusha's Picture"
           className={`relative rounded-full h-40 w-40 mx-auto object-cover z-20 border-4`}
         />
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] z-20 cursor-default ">
-          {props.data.title}
+          Software Developer
         </h2>
         <div className="z-20">
           <h1 className=" text-3xl md:text-5xl lg:text-6xl font-semibold px-10 h-20">

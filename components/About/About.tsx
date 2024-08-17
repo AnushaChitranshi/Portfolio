@@ -2,6 +2,7 @@ import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
 import quote from "./quote.svg";
+import AboutImage from "../../assets/AboutImage.jpeg"
 
 type Props = {
   data: any;
@@ -26,7 +27,6 @@ const About = (props: Props) => {
   }
 
   return (
-    // test
     <div className="w-screen h-screen ">
       <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row  px-10 justify-center gap-20 mx-auto items-center z-20 ">
         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
@@ -64,33 +64,20 @@ const About = (props: Props) => {
               className="mt-28 flex h-60 w-64 items-start justify-center md:h-96 md:w-96 relative "
             >
               <Image
-                src={props.data.aboutImage}
+                src={AboutImage}
                 width={1000}
                 height={1000}
                 priority
                 quality={100}
-                alt="Sunil's about image"
+                alt="Anusha's about image"
                 className="-mb-10 h-64 w-64 sm:drop-shadow-[0_0px_20px_#ffffff0f] flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110
                 "
-                
-              />
-
-              {/* hover image */}
-              <Image
-                src={props.data.aboutHoverImage}
-                width={2464}
-                height={2464}
-                priority
-                quality={100}
-                alt="Sunil's about image"
-                className="absolute -mb-10  h-64 w-64 sm:drop-shadow-[0_0px_20px_#ffffff0f] flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110"
               />
             </motion.div>
           </motion.div>
         </motion.div>
 
         <div className={`space-y-6 px-0 md:px-3 flex items-center`}>
-          {/* <h4 className="text-2xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4> */}
           <motion.p
             initial={{
               x: 100,
@@ -123,16 +110,7 @@ const About = (props: Props) => {
               priority
             />
 
-            {props.data.aboutText.split(" ").map((word: any, key: any) => {
-              return (
-                <span
-                  className="hover:text-[#F7AB0A] transition-all ease-in-out hover:scale-105 tracking-wide"
-                  key={key}
-                >
-                  {word}{" "}
-                </span>
-              );
-            })}
+            {"Hi! My name is Anusha Chitranshi and I am a recent graduate from the University of Cincinnati. I majored in Computer Science, with a minor in Economics. I hope to work as a Cloud Engineer, exploring and figuring new things out everyday!"}
           </motion.p>
         </div>
       </div>
