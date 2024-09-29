@@ -1,19 +1,15 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import Header from "components/Header/Header";
-import Hero from "components/Hero/Hero";
-import About from "components/About/About";
-// import Skills from "components/OldSkills/Skills";
-import Projects from "components/Projects/Projects";
 import ContactMe from "components/Contact/ContactMe";
-import WorkExperience from "components/WorkExperience/WorkExperience";
 import axios from "axios";
 import React from "react";
 import SkillsSection from "components/SkillsSection/SkillsSection";
 import Carousel from "components/Carousel/Carousel";
 import { useState, useEffect } from "react";
 import ProjectsMobile from "components/ProjectsMobile/ProjectsMobile";
-// import { InfinitySpin } from "react-loader-spinner";
+import Hero from "components/Hero/Hero";
+import About from "components/About/About";
+import WorkExperience from "components/WorkExperience/WorkExperience"
 
 const inter = Inter({ subsets: ["latin"] });
 export async function getStaticProps() {
@@ -44,14 +40,9 @@ export default function Home(props: Props) {
       <Head>
         <title>{`Anusha Chitranshi`}</title>
       </Head>
-      {/* Header */}
-      {/* <Header data={props.data[5]} /> */}
-      {/* <section id="text">
-  <Test/>
-</section> */}
 
-      {/* Hero */}
-      <section id="hero" className="snap-start">
+       {/* Hero */}
+       <section id="hero" className="snap-start">
         <Hero data={props.data[1]} />
         
       </section>
@@ -66,26 +57,13 @@ export default function Home(props: Props) {
         id="certifications"
         className="snap-start snap-mandatory snap-always"
       >
-        <WorkExperience data={props.data[2]} />
+        <WorkExperience />
       </section>
-
-      {/* Skills */}
-      {/* <section
-      id="skills"
-      className="snap-start snap-mandatory  snap-always"
-    >
-      <Skills data={props.data[3]} />
-    </section> */}
 
       {/* Skills new section */}
       <section id="skills" className="snap-start snap-mandatory  snap-always">
-        <SkillsSection data={props.data[3]} />
+        <SkillsSection />
       </section>
-
-      {/* Projects old*/}
-      {/* <section id="projects" className="snap-start snap-mandatory  snap-always">
-        <Projects data={props.data[4]} />
-      </section> */}
 
       {/* Projects new */}
       <section id="projects" className="snap-start snap-mandatory  snap-always max-h-screen overflow-clip">
