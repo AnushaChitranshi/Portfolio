@@ -76,7 +76,7 @@ const Hero = (props: Props) => {
             <Link href="#projects">
               <button className="heroButton">Projects</button>
             </Link>
-            <Link href="https://sunilresume.vercel.app/" target="_blank">
+            <Link href="/Resume_AnushaC_Fall2024.pdf" target="_blank">
               <button className="heroButton">Resume</button>
             </Link>
           </div>
