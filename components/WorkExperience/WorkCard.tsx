@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 type Props = {
-  name: string;
-  provider: string;
-  offeredBy: string;
+  position: string;
+  company: string;
+  location: string;
   logo: string;
-  status: string;
-  learnPoints?: any;
+  period: string;
+  learnPoints: string[];
   link?: string;
 };
 
 const WorkCard = (props: Props) => {
-  const learnPoints = props.learnPoints;
+  const { position, company, logo, period, location, learnPoints, link } = props;
 
   return (
-    <Link href={props.link ? props.link : ""} passHref target="_blank">
+    // <Link href={link ? link : ""} passHref target="_blank">
       <motion.article
         initial={{
           x: 100,
@@ -32,65 +32,56 @@ const WorkCard = (props: Props) => {
           y: 0,
           x: 0,
         }}
-        // viewport={{ once: true }}
         className="group antialiased flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 flex-grow-0 sm:w-96 p-10 md:p-2 bg-[#292929] w-fit  max-h-[650px] min-h-[550px] cursor-default"
       >
-        {/* compony logo */}
-        <motion.div
-          initial={{
-            x: -50,
-            opacity: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-          }}
-        >
+          {/* Company logo */}
+          <motion.div
+            initial={{
+              x: -50,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 1,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+          >
           <Image
             src={props.logo}
             alt="company logo"
-            className="w-12 h-12 rounded-full xl:w-[50px] xl:h-[50px] object-cover object-center mt-4 group-hover:scale-125 group-hover:drop-shadow-[0_0px_15px_#ffffff2f] transition ease-in-out duration-300 border-2"
-            width={200}
-            height={200}
+            className="mt-6 object-contain object-center group-hover:scale-125 group-hover:drop-shadow-[0_0px_15px_#ffffff2f] transition ease-in-out duration-300 "
+            width={100} // Adjust as necessary
+            height={100}
+            style={{ objectFit: "contain" }} // Ensures logo fits inside the bounds
             priority={true}
           />
         </motion.div>
 
         <div className="px-0 md:px-10 w-[100%] space-y-2 transition ease-in-out duration-300">
-          {/*Certification name */}
+          {/* Position */}
           <h4 className="text-4xl tracking-wider sm:text-3xl font-light cursor-default pb-2">
-            {props.name}
+            {position}
           </h4>
           <hr />
-          {/* offered by */}
-          <p className="uppercase  text-gray-400 text-base font-medium pt-2">
-            Offered By:{" "}
-            <span className="text-slate-200">{props.offeredBy}</span>
+          {/* Company */}
+          <p className="uppercase text-yellow-600 text-base font-medium pt-2">
+            Company: <span className="text-slate-200">{company}</span>
           </p>
-          {/* Provider */}
-          <p className="uppercase  text-gray-400 text-base font-medium ">
-            Provider: <span className="text-slate-200">{props.provider}</span>
-          </p>
-          {/*Status */}
-          <p className={`uppercase text-gray-400 text-base font-medium pb-2 `}>
-            Status:{" "}
-            <span
-              className={`text-${
-                props.status == "Completed" || props.status == "completed"
-                  ? "slate-200"
-                  : "[#F7AB0A]"
-              }`}
-            >
-              {props.status}
-            </span>
+          {/* Period */}
+          <p className="uppercase  text-yellow-600 text-base font-medium ">
+            Period: <span className="text-slate-200">{period}</span>
           </p>
           <hr />
-          {/* summary points */}
+          {/* Location */}
+          <p className="uppercase  text-yellow-600 text-base font-medium ">
+            Location: <span className="text-slate-200">{location}</span>
+          </p>
+          <hr />
+          {/* Learn points */}
           <div className="flex flex-wrap">
-            {learnPoints.map((item: any, i: number) => {
+            {learnPoints.map((item: string, i: number) => {
               return (
                 <div
                   key={i}
@@ -103,7 +94,7 @@ const WorkCard = (props: Props) => {
           </div>
         </div>
       </motion.article>
-    </Link>
+    // </Link>
   );
 };
 

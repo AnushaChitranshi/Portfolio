@@ -68,7 +68,7 @@ const Hero = (props: Props) => {
               <button className="heroButton">About</button>
             </Link>
             <Link href="#certifications">
-              <button className="heroButton">certifications</button>
+              <button className="heroButton">Work Experiences</button>
             </Link>
             <Link href="#skills">
               <button className="heroButton">Skills</button>
