@@ -43,13 +43,13 @@ export default function Home(props: Props) {
 
        {/* Hero */}
        <section id="hero" className="snap-start">
-        <Hero data={props.data[1]} />
+        <Hero  />
         
       </section>
 
       {/* About */}
       <section id="about" className="snap-center snap-mandatory  snap-always">
-        <About data={props.data[0]} />
+        <About />
       </section>
 
       {/* Certifications */}

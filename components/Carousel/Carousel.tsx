@@ -3,7 +3,6 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import classes from "./Carousel.module.css";
-// import "./Carousel.module.css"
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

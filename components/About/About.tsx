@@ -4,11 +4,7 @@ import Image from "next/image";
 import quote from "./quote.svg";
 import AboutImage from "../../assets/AboutImage.jpeg"
 
-type Props = {
-  data: any;
-};
-
-const About = (props: Props) => {
+const About = () => {
   const x = useMotionValue(100);
   const y = useMotionValue(100);
 

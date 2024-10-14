@@ -7,11 +7,7 @@ import { motion } from "framer-motion";
 
 import HeroImage from "../../assets/heroImage.png";
 
-type Props = {
-  data: any;
-};
-
-const Hero = (props: Props) => {
+const Hero = () => {
   const [text] = useTypewriter({
     words: [
       "Hey this is Anusha!",
